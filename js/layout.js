@@ -20,10 +20,6 @@ export function renderHeader() {
     <div class="top-bar">
       <div class="container top-bar-inner">
         <span class="top-bar-text">${site.university} · ${site.chapter}</span>
-        <div class="social-links">
-          <a href="${site.social.instagram}" class="social-link" data-placeholder="instagram">Instagram</a>
-          <a href="${site.social.linkedin}" class="social-link" data-placeholder="linkedin">LinkedIn</a>
-        </div>
       </div>
     </div>
     <header class="site-header">
@@ -64,9 +60,11 @@ export function renderFooter() {
         </div>
         <div class="footer-connect">
           <h3>Connect</h3>
-          <a href="${site.social.instagram}" data-placeholder="instagram">Instagram</a>
-          <a href="${site.social.linkedin}" data-placeholder="linkedin">LinkedIn</a>
-          <a href="mailto:${site.email}">${site.email}</a>
+          <div class="footer-connect-btns">
+            <a href="${site.social.instagram}" class="footer-connect-btn" target="_blank" rel="noopener noreferrer" data-social="instagram">Instagram</a>
+            <a href="${site.social.linkedin}" class="footer-connect-btn" target="_blank" rel="noopener noreferrer" data-social="linkedin">LinkedIn</a>
+            <a href="mailto:${site.email}" class="footer-connect-btn footer-connect-btn-email">${site.email}</a>
+          </div>
         </div>
       </div>
       <div class="container footer-bottom">

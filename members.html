@@ -18,6 +18,18 @@
     </section>
     <section class="page-content">
       <div class="container">
+        <div class="member-search reveal">
+          <label class="member-search-label" for="member-search">Search members</label>
+          <input
+            type="search"
+            id="member-search"
+            class="member-search-input"
+            placeholder="Search by last or first name..."
+            autocomplete="off"
+          >
+          <p class="member-search-meta" id="member-search-meta" hidden></p>
+        </div>
+
         <div class="tabs reveal">
           <div class="tab-list">
             <button class="tab-btn active" data-tab="pledges">Pledges</button>
@@ -34,7 +46,7 @@
 
           <div id="members" class="tab-panel">
             <h2 style="color: var(--brown);">Current Members</h2>
-            <ul class="member-list">
+            <ul class="member-list" data-member-list>
               <li>Acevedo, Brenda</li><li>Ahluwalia, Simar</li><li>Ashiq, Muhammad</li><li>Ashiq, Rimla</li>
               <li>Azzarone, Abigail</li><li>Chen, Emily</li><li>Chin, Hailey</li><li>Cyriaque, Bernick</li>
               <li>Deiters, Anthony</li><li>Dowd, Beatrice</li><li>Evans, Nyla</li><li>Foley, Anne</li>
@@ -55,7 +67,7 @@
 
           <div id="alumni" class="tab-panel">
             <h2 style="color: var(--brown);">Alumni</h2>
-            <ul class="member-list">
+            <ul class="member-list" data-member-list>
               <li>Balasubramanian, Mithilesh</li><li>Bonilla Delgado, Melany</li><li>Bruno, Deanna</li>
               <li>Buono, Michelle</li><li>D'andrea, Anthony</li><li>Dai, Jason</li><li>Demonte, Madison</li>
               <li>Dormeus, Mackensdy</li><li>Ficco, Matthew</li><li>Frage, Jonathan</li><li>Franchino, Iago</li>
