@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Newsletter | Beta Alpha Psi – Stony Brook</title>
+  <link rel="icon" href="/assets/images/bap-logo.png" type="image/png">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Newsletter</h1>
+        <p>Weekly chapter updates and announcements.</p>
+      </div>
+    </section>
+    <section class="page-content">
+      <div class="container">
+        <div class="placeholder-panel reveal">
+          <strong>📰 Weekly Newsletter</strong>
+          <p>Newsletter embed or signup link will go here.</p>
+          <p>Update <code>js/site-config.js</code> → <code>links.newsletter</code></p>
+          <a href="#" id="newsletter-link" class="btn btn-primary" style="margin-top: 1rem;">Sign Up for Newsletter</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script type="module">
+    import { site } from '/js/site-config.js';
+    document.getElementById('newsletter-link').href = site.links.newsletter;
+  </script>
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

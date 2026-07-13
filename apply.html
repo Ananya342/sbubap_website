@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apply | Beta Alpha Psi – Stony Brook</title>
+  <link rel="icon" href="/assets/images/bap-logo.png" type="image/png">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Become a Member</h1>
+        <p>Join the Omicron Alpha Chapter.</p>
+      </div>
+    </section>
+    <section class="page-content">
+      <div class="container">
+        <div class="placeholder-panel reveal">
+          <strong>📝 Membership Application</strong>
+          <p>Applications for Spring 2026 are currently closed. Stay tuned for Fall 2026!</p>
+          <p>When your new form is ready, add the link in <code>js/site-config.js</code> → <code>links.membershipForm</code></p>
+          <a href="#" id="form-link" class="btn btn-primary" style="margin-top: 1rem;">Application Form</a>
+        </div>
+        <p style="text-align: center; margin-top: 2rem;">
+          <a href="/membership.html">View membership requirements →</a>
+        </p>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script type="module">
+    import { site } from '/js/site-config.js';
+    document.getElementById('form-link').href = site.links.membershipForm;
+  </script>
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

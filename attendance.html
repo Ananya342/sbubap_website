@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Attendance Tracker | Beta Alpha Psi – Stony Brook</title>
+  <link rel="icon" href="/assets/images/bap-logo.png" type="image/png">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Attendance Tracker</h1>
+        <p>Track your points and event attendance.</p>
+      </div>
+    </section>
+    <section class="page-content">
+      <div class="container">
+        <div class="placeholder-panel reveal">
+          <strong>✅ Attendance Tracker — Fall 2026</strong>
+          <p>Tracker will be uploaded soon.</p>
+          <p>Add your Google Sheet or form link in <code>js/site-config.js</code> → <code>links.attendanceTracker</code></p>
+          <a href="#" id="tracker-link" class="btn btn-secondary" style="margin-top: 1rem;">Open Tracker</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script type="module">
+    import { site } from '/js/site-config.js';
+    document.getElementById('tracker-link').href = site.links.attendanceTracker;
+  </script>
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

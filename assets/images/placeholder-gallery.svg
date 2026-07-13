@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Gallery placeholder">
+  <rect width="400" height="300" fill="#eae1b1"/>
+  <rect x="30" y="30" width="340" height="240" rx="6" fill="none" stroke="#dd3333" stroke-width="2" stroke-dasharray="10 8"/>
+  <text x="200" y="155" text-anchor="middle" fill="#993300" font-family="system-ui,sans-serif" font-size="16" font-weight="600">Gallery photo</text>
+  <text x="200" y="180" text-anchor="middle" fill="#993300" font-family="system-ui,sans-serif" font-size="13" opacity="0.7">Replace in assets/images/</text>
+</svg>

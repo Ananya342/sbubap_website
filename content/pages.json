@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1272,
+    "slug": "attendance-tracker",
+    "title": "Attendance Tracker",
+    "link": "https://you.stonybrook.edu/sbubap/attendance-tracker/",
+    "modified": "2026-07-05T04:41:37",
+    "localFile": "content/pages/attendance-tracker.html"
+  },
+  {
+    "id": 1244,
+    "slug": "resources-1",
+    "title": "Resources For Members &#038; Pledges",
+    "link": "https://you.stonybrook.edu/sbubap/resources-1/",
+    "modified": "2026-07-05T05:25:52",
+    "localFile": "content/pages/resources-1.html"
+  },
+  {
+    "id": 1191,
+    "slug": "home",
+    "title": "Home",
+    "link": "https://you.stonybrook.edu/sbubap/",
+    "modified": "2026-07-11T16:24:06",
+    "localFile": "content/pages/index.html"
+  },
+  {
+    "id": 1004,
+    "slug": "archive",
+    "title": "Archive",
+    "link": "https://you.stonybrook.edu/sbubap/events/archive/",
+    "modified": "2025-04-28T23:19:07",
+    "localFile": "content/pages/archive.html"
+  },
+  {
+    "id": 977,
+    "slug": "news-letter",
+    "title": "Newsletter",
+    "link": "https://you.stonybrook.edu/sbubap/events/news-letter/",
+    "modified": "2026-02-24T19:06:59",
+    "localFile": "content/pages/news-letter.html"
+  },
+  {
+    "id": 964,
+    "slug": "faculty-advisor",
+    "title": "Faculty Advisors",
+    "link": "https://you.stonybrook.edu/sbubap/leadership/faculty-advisor/",
+    "modified": "2026-07-07T15:48:55",
+    "localFile": "content/pages/faculty-advisor.html"
+  },
+  {
+    "id": 962,
+    "slug": "e-board-member",
+    "title": "Executive Board",
+    "link": "https://you.stonybrook.edu/sbubap/leadership/e-board-member/",
+    "modified": "2026-06-30T04:48:12",
+    "localFile": "content/pages/e-board-member.html"
+  },
+  {
+    "id": 931,
+    "slug": "alumni-spotlight",
+    "title": "Alumni Spotlight",
+    "link": "https://you.stonybrook.edu/sbubap/currentmemberinductees/alumni/alumni-spotlight/",
+    "modified": "2025-07-28T00:07:52",
+    "localFile": "content/pages/alumni-spotlight.html"
+  },
+  {
+    "id": 516,
+    "slug": "alumni",
+    "title": "Alumni",
+    "link": "https://you.stonybrook.edu/sbubap/currentmemberinductees/alumni/",
+    "modified": "2026-01-26T20:40:18",
+    "localFile": "content/pages/alumni.html"
+  },
+  {
+    "id": 388,
+    "slug": "prospective-inductees",
+    "title": "Pledges",
+    "link": "https://you.stonybrook.edu/sbubap/currentmemberinductees/prospective-inductees/",
+    "modified": "2026-01-26T20:29:18",
+    "localFile": "content/pages/prospective-inductees.html"
+  },
+  {
+    "id": 375,
+    "slug": "current-members",
+    "title": "Members",
+    "link": "https://you.stonybrook.edu/sbubap/currentmemberinductees/current-members/",
+    "modified": "2026-03-09T17:07:01",
+    "localFile": "content/pages/current-members.html"
+  },
+  {
+    "id": 359,
+    "slug": "currentmemberinductees",
+    "title": "Our Members",
+    "link": "https://you.stonybrook.edu/sbubap/currentmemberinductees/",
+    "modified": "2025-01-12T02:02:11",
+    "localFile": "content/pages/currentmemberinductees.html"
+  },
+  {
+    "id": 121,
+    "slug": "sponsors",
+    "title": "Accounting Advisory Board and Sponsors",
+    "link": "https://you.stonybrook.edu/sbubap/sponsors/",
+    "modified": "2026-06-30T04:57:33",
+    "localFile": "content/pages/sponsors.html"
+  },
+  {
+    "id": 62,
+    "slug": "membership-application",
+    "title": "Contract/Application",
+    "link": "https://you.stonybrook.edu/sbubap/membership-application/",
+    "modified": "2026-06-24T14:29:38",
+    "localFile": "content/pages/membership-application.html"
+  },
+  {
+    "id": 34,
+    "slug": "contact-us",
+    "title": "Contact Us",
+    "link": "https://you.stonybrook.edu/sbubap/contact-us/",
+    "modified": "2026-06-30T05:00:47",
+    "localFile": "content/pages/contact-us.html"
+  },
+  {
+    "id": 30,
+    "slug": "photo-gallery",
+    "title": "Photo Gallery",
+    "link": "https://you.stonybrook.edu/sbubap/photo-gallery/",
+    "modified": "2026-07-05T06:07:09",
+    "localFile": "content/pages/photo-gallery.html"
+  },
+  {
+    "id": 27,
+    "slug": "events",
+    "title": "Events Information",
+    "link": "https://you.stonybrook.edu/sbubap/events/",
+    "modified": "2026-07-02T05:05:51",
+    "localFile": "content/pages/events.html"
+  },
+  {
+    "id": 25,
+    "slug": "membership",
+    "title": "Membership Requirements",
+    "link": "https://you.stonybrook.edu/sbubap/membership/",
+    "modified": "2026-06-30T03:38:28",
+    "localFile": "content/pages/membership.html"
+  },
+  {
+    "id": 9,
+    "slug": "leadership",
+    "title": "Leadership",
+    "link": "https://you.stonybrook.edu/sbubap/leadership/",
+    "modified": "2026-07-11T15:13:19",
+    "localFile": "content/pages/leadership.html"
+  },
+  {
+    "id": 2,
+    "slug": "about",
+    "title": "About Us",
+    "link": "https://you.stonybrook.edu/sbubap/about/",
+    "modified": "2026-07-11T15:29:32",
+    "localFile": "content/pages/about.html"
+  }
+]

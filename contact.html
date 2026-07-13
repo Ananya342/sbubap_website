@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Beta Alpha Psi – Stony Brook</title>
+  <link rel="icon" href="/assets/images/bap-logo.png" type="image/png">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you.</p>
+      </div>
+    </section>
+    <section class="page-content">
+      <div class="container">
+        <div class="card-grid reveal">
+          <article class="pillar-card" style="text-align: center;">
+            <div class="pillar-icon">✉️</div>
+            <h3>Email</h3>
+            <a href="mailto:Sbubap@stonybrook.edu">Sbubap@stonybrook.edu</a>
+          </article>
+          <article class="pillar-card" style="text-align: center;">
+            <div class="pillar-icon">📰</div>
+            <h3>Newsletter</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Weekly chapter updates</p>
+            <a href="#" id="newsletter-link" class="btn btn-secondary" style="margin-top: 0.75rem;">Sign Up</a>
+          </article>
+          <article class="pillar-card" style="text-align: center;">
+            <div class="pillar-icon">💬</div>
+            <h3>GroupMe</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Event notifications</p>
+            <a href="#" id="groupme-link" class="btn btn-secondary" style="margin-top: 0.75rem;">Join GroupMe</a>
+          </article>
+        </div>
+
+        <div class="placeholder-panel reveal" style="margin-top: 2.5rem;">
+          <strong>📍 Location</strong>
+          <p>Stony Brook University, College of Business<br>Stony Brook, NY 11794</p>
+          <p style="margin-top: 1rem; font-size: 0.9rem;">Google Maps embed can be added here when ready — no external dependency required until you paste the embed code.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script type="module">
+    import { site } from '/js/site-config.js';
+    document.getElementById('newsletter-link').href = site.links.newsletter;
+    document.getElementById('groupme-link').href = site.social.groupme;
+  </script>
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

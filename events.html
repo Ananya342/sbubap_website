@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Events | Beta Alpha Psi – Stony Brook</title>
+  <link rel="icon" href="/assets/images/bap-logo.png" type="image/png">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Events</h1>
+        <p>Professional, social, and service events every semester.</p>
+      </div>
+    </section>
+    <section class="page-content">
+      <div class="container">
+        <div class="placeholder-panel reveal">
+          <strong>📅 Spring 2026 Calendar of Events</strong>
+          <p>Event flyer and calendar link will go here.</p>
+          <p>Update <code>js/site-config.js</code> → <code>links.googleCalendar</code> with your Google Calendar URL.</p>
+          <a href="#" class="btn btn-secondary" id="calendar-link" style="margin-top: 1rem;">Add to Google Calendar</a>
+        </div>
+
+        <div class="card-grid reveal" style="margin-top: 3rem;">
+          <article class="pillar-card">
+            <div class="pillar-icon">💼</div>
+            <h3>Professional Events</h3>
+            <p style="color: var(--text-muted); font-size: 0.92rem;">Firm presentations, resume workshops, career panels, and office tours with our advisory board partners.</p>
+          </article>
+          <article class="pillar-card">
+            <div class="pillar-icon">🎉</div>
+            <h3>Social Events</h3>
+            <p style="color: var(--text-muted); font-size: 0.92rem;">Chapter gatherings, induction ceremonies, and networking mixers with members and alumni.</p>
+          </article>
+          <article class="pillar-card">
+            <div class="pillar-icon">❤️</div>
+            <h3>Service Events</h3>
+            <p style="color: var(--text-muted); font-size: 0.92rem;">Food drives, volunteering with Island Harvest, Toys for Tots, and community outreach.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script type="module">
+    import { site } from '/js/site-config.js';
+    const link = document.getElementById('calendar-link');
+    if (link) link.href = site.links.googleCalendar;
+  </script>
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

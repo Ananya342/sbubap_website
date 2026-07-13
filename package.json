@@ -1,0 +1,14 @@
+{
+  "name": "sbubap",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "pull": "node scripts/pull-from-wordpress.mjs"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
+}

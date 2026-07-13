@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Leadership | Beta Alpha Psi – Stony Brook</title>
+  <link rel="icon" href="/assets/images/bap-logo.png" type="image/png">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Leadership</h1>
+        <p>Meet our Executive Board and Faculty Advisors.</p>
+      </div>
+    </section>
+    <section class="page-content">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Executive Board</h2>
+          <hr class="divider">
+          <p>Fall 2026 – Present</p>
+        </div>
+        <div class="board-grid" id="board-grid"></div>
+
+        <div class="section-header reveal" id="advisors" style="margin-top: 4rem;">
+          <h2>Faculty Advisors</h2>
+          <hr class="divider">
+        </div>
+        <div class="board-grid" id="advisor-grid"></div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script type="module">
+    import { board, advisors } from '/js/site-config.js';
+    import { initLayout } from '/js/layout.js';
+
+    function renderCard(person) {
+      return `
+        <article class="board-card reveal">
+          <img src="${person.photo}" alt="${person.name}" class="board-photo" width="300" height="300">
+          <div class="board-body">
+            <h3>${person.name}</h3>
+            <p class="board-role">${person.role}</p>
+            <p class="board-term">${person.term || ''}</p>
+            <a href="mailto:${person.email}" class="board-email">${person.email}</a>
+            <p class="board-bio">${person.bio}</p>
+          </div>
+        </article>`;
+    }
+
+    document.getElementById('board-grid').innerHTML = board.map(renderCard).join('');
+    document.getElementById('advisor-grid').innerHTML = advisors.map(renderCard).join('');
+  </script>
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>
