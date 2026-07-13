@@ -81,10 +81,49 @@ function initMemberSearch() {
   return filterList;
 }
 
+function initStatCounters() {
+  const stats = document.querySelectorAll('.hero-stat-value');
+  if (!stats.length) return;
+
+  const animateValue = (el) => {
+    const raw = el.textContent.trim();
+    const match = raw.match(/^(\d+)(.*)$/);
+    if (!match) return;
+
+    const end = Number(match[1]);
+    const suffix = match[2];
+    const duration = 900;
+    const startTime = performance.now();
+
+    const step = (now) => {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const eased = 1 - (1 - progress) ** 3;
+      el.textContent = `${Math.round(end * eased)}${suffix}`;
+      if (progress < 1) requestAnimationFrame(step);
+    };
+
+    requestAnimationFrame(step);
+  };
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting || entry.target.dataset.counted) return;
+        entry.target.dataset.counted = 'true';
+        animateValue(entry.target);
+      });
+    },
+    { threshold: 0.6 }
+  );
+
+  stats.forEach((el) => observer.observe(el));
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initLayout();
   initSocialLinks();
   const refreshMemberSearch = initMemberSearch();
+  initStatCounters();
 
   document.querySelectorAll('.accordion-trigger').forEach((btn) => {
     btn.addEventListener('click', () => {

@@ -1,21 +1,46 @@
 import { site } from './site-config.js';
 
+function normalizePath(path) {
+  const p = path.replace(/\/$/, '') || '/';
+  if (p === '/index.html') return '/';
+  return p;
+}
+
+function isLinkActive(href) {
+  const current = normalizePath(window.location.pathname);
+  const target = normalizePath(href);
+
+  if (target === '/') {
+    return current === '/' || current === '';
+  }
+
+  return current === target || current.endsWith(target);
+}
+
+function isNavItemActive(item) {
+  if (isLinkActive(item.href)) return true;
+  return item.children?.some((child) => isLinkActive(child.href)) ?? false;
+}
+
 function navItem(item) {
+  const active = isNavItemActive(item);
+
   if (item.children) {
     return `
       <li class="nav-item has-dropdown">
-        <a href="${item.href}">${item.label}</a>
+        <a href="${item.href}"${active ? ' class="is-active"' : ''}>${item.label}</a>
         <ul class="dropdown">
-          ${item.children.map((c) => `<li><a href="${c.href}">${c.label}</a></li>`).join('')}
+          ${item.children.map((c) => {
+            const childActive = isLinkActive(c.href) ? ' class="is-active"' : '';
+            return `<li><a href="${c.href}"${childActive}>${c.label}</a></li>`;
+          }).join('')}
         </ul>
       </li>`;
   }
-  return `<li class="nav-item"><a href="${item.href}">${item.label}</a></li>`;
+  return `<li class="nav-item"><a href="${item.href}"${active ? ' class="is-active"' : ''}>${item.label}</a></li>`;
 }
 
 export function renderHeader() {
-  const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
-
   return `
     <div class="top-bar">
       <div class="container top-bar-inner">
@@ -78,6 +103,11 @@ export function initLayout() {
   const footerEl = document.getElementById('site-footer');
   if (headerEl) headerEl.innerHTML = renderHeader();
   if (footerEl) footerEl.innerHTML = renderFooter();
+
+  const header = document.querySelector('.site-header');
+  const onScroll = () => header?.classList.toggle('is-scrolled', window.scrollY > 16);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
 
   const toggle = document.querySelector('.nav-toggle');
   const nav = document.querySelector('.main-nav');
