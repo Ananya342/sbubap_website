@@ -42,11 +42,6 @@ function navItem(item) {
 
 export function renderHeader() {
   return `
-    <div class="top-bar">
-      <div class="container top-bar-inner">
-        <span class="top-bar-text">${site.university} · ${site.chapter}</span>
-      </div>
-    </div>
     <header class="site-header">
       <div class="container header-inner">
         <a href="/" class="brand">

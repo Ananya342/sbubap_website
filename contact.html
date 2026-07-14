@@ -5,24 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact | Beta Alpha Psi – Stony Brook</title>
   <link rel="icon" href="/assets/images/bap-logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
   <div id="site-header"></div>
   <main>
-    <section class="page-hero">
-      <div class="container">
-        <h1>Contact Us</h1>
-        <p>We'd love to hear from you.</p>
+    <section class="contact-split reveal">
+      <div class="contact-info" id="contact-info-panel">
+        <div class="contact-info-inner">
+          <h1 class="contact-info-title">Contact Us</h1>
+          <p class="contact-lead" id="contact-intro"></p>
+          <p class="contact-email-line">
+            <a href="#" id="contact-email-link"></a>
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-form-panel">
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="contact-form-row">
+            <label class="contact-field">
+              <span class="contact-label">First Name *</span>
+              <input type="text" name="firstName" placeholder="First Name *" required autocomplete="given-name">
+            </label>
+            <label class="contact-field">
+              <span class="contact-label">Last Name *</span>
+              <input type="text" name="lastName" placeholder="Last Name *" required autocomplete="family-name">
+            </label>
+          </div>
+          <label class="contact-field">
+            <span class="contact-label">Email *</span>
+            <input type="email" name="email" placeholder="Email *" required autocomplete="email">
+          </label>
+          <label class="contact-field">
+            <span class="contact-label">Subject</span>
+            <input type="text" name="subject" placeholder="Subject" autocomplete="off">
+          </label>
+          <label class="contact-field">
+            <span class="contact-label">Message</span>
+            <textarea name="message" rows="6" placeholder="Message" required></textarea>
+          </label>
+          <button type="submit" class="contact-submit">Send</button>
+          <p class="contact-form-note" id="contact-form-note" hidden></p>
+        </form>
       </div>
     </section>
+
     <section class="page-content">
       <div class="container">
         <div class="card-grid reveal">
           <article class="pillar-card" style="text-align: center;">
             <div class="pillar-icon" aria-hidden="true">01</div>
             <h3>Email</h3>
-            <a href="mailto:Sbubap@stonybrook.edu">Sbubap@stonybrook.edu</a>
+            <a href="mailto:Sbubap@stonybrook.edu" id="contact-card-email">Sbubap@stonybrook.edu</a>
           </article>
           <article class="pillar-card" style="text-align: center;">
             <div class="pillar-icon" aria-hidden="true">02</div>
@@ -49,8 +87,74 @@
   <div id="site-footer"></div>
   <script type="module">
     import { site } from '/js/site-config.js';
+
+    const panel = document.getElementById('contact-info-panel');
+    const intro = document.getElementById('contact-intro');
+    const emailLink = document.getElementById('contact-email-link');
+    const cardEmail = document.getElementById('contact-card-email');
+    const form = document.getElementById('contact-form');
+    const formNote = document.getElementById('contact-form-note');
+
+    if (panel && site.contact?.backgroundImage) {
+      panel.style.setProperty('--contact-bg', `url('${site.contact.backgroundImage}')`);
+    }
+
+    intro.textContent = site.contact?.intro ?? '';
+    emailLink.href = `mailto:${site.email}`;
+    emailLink.textContent = site.email;
+    if (cardEmail) {
+      cardEmail.href = `mailto:${site.email}`;
+      cardEmail.textContent = site.email;
+    }
+
     document.getElementById('newsletter-link').href = site.links.newsletter;
     document.getElementById('groupme-link').href = site.social.groupme;
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      formNote.hidden = true;
+
+      const data = new FormData(form);
+      const firstName = data.get('firstName')?.toString().trim() ?? '';
+      const lastName = data.get('lastName')?.toString().trim() ?? '';
+      const email = data.get('email')?.toString().trim() ?? '';
+      const subject = data.get('subject')?.toString().trim() || 'BAP Contact Form';
+      const message = data.get('message')?.toString().trim() ?? '';
+
+      if (!firstName || !lastName || !email || !message) {
+        formNote.textContent = 'Please fill in all required fields.';
+        formNote.hidden = false;
+        return;
+      }
+
+      const endpoint = site.links.contactForm;
+      if (endpoint && endpoint !== '#') {
+        try {
+          const response = await fetch(endpoint, {
+            method: 'POST',
+            headers: { Accept: 'application/json' },
+            body: data,
+          });
+          if (response.ok) {
+            form.reset();
+            formNote.textContent = 'Message sent — we\'ll be in touch soon!';
+            formNote.hidden = false;
+            return;
+          }
+        } catch {
+          /* fall through to mailto */
+        }
+      }
+
+      const body = [
+        `Name: ${firstName} ${lastName}`,
+        `Email: ${email}`,
+        '',
+        message,
+      ].join('\n');
+      const mailto = `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
+    });
   </script>
   <script type="module" src="/js/main.js"></script>
 </body>

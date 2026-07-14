@@ -10,11 +10,6 @@
 <body>
   <div id="site-header"></div>
   <main>
-    <section class="page-hero">
-      <div class="container">
-        <h1>Leadership</h1>
-      </div>
-    </section>
     <section class="page-content">
       <div class="container">
         <div class="section-header reveal">
@@ -35,7 +30,6 @@
   <div id="site-footer"></div>
   <script type="module">
     import { board, advisors } from '/js/site-config.js';
-    import { initLayout } from '/js/layout.js';
 
     function renderProfile(person, isLast) {
       return `
@@ -46,7 +40,9 @@
             <a href="mailto:${person.email}" class="board-email">${person.email}</a>
             <p class="board-bio">${person.bio}</p>
           </div>
-          <img src="${person.photo}" alt="${person.name}" class="board-photo" width="300" height="300">
+          <div class="board-photo-wrap">
+            <img src="${person.photo}" alt="${person.name}" class="board-photo" loading="lazy">
+          </div>
         </article>
         ${isLast ? '' : '<hr class="board-divider">'}
       `;

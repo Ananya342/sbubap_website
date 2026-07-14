@@ -23,6 +23,18 @@ export const site = {
     googleCalendar: '#',
     membershipForm: '#',
     attendanceTracker: '#',
+    contactForm: '#',
+  },
+
+  contact: {
+    intro: 'Interested in joining? Send us a message so we can add you to our mailing list!',
+    address: [
+      'Beta Alpha Psi',
+      'College of Business',
+      'Stony Brook University',
+      'Stony Brook, NY 11794',
+    ],
+    backgroundImage: '/assets/images/hero-chapter-photo.png',
   },
 
   nav: [
@@ -115,7 +127,7 @@ export const board = [
     term: 'Fall 2026 – Present',
     email: 'ananya.jain.1@stonybrook.edu',
     bio: 'Hi everyone! My name is Ananya Jain, and I am the President. I am currently a junior double majoring in Computer Science and Applied Mathematics & Statistics, with a minor in Finance. I wanted this position because Beta Alpha Psi has provided me with an incredible community, professional network, and opportunities for growth. As President, I hope to help expand that community and create impactful opportunities for students at Stony Brook. I aspire to work in the finance industry, particularly in risk, research, or analytical roles, where I can combine my technical and quantitative skills to make an impact. One piece of advice I have for current students is to never be afraid of taking risks or failing as some of the greatest opportunities and lessons lie there.',
-    photo: '/assets/images/placeholder-headshot.svg',
+    photo: '/assets/images/leadership/ananya-jain.png',
   },
   {
     name: 'Abby Azzarone',
@@ -123,7 +135,7 @@ export const board = [
     term: 'Fall 2026 – Present',
     email: 'abigail.azzarone@stonybrook.edu',
     bio: 'Hi everyone, my name is Abby Azzarone and I am the Vice President. I am currently in my third year at Stony Brook University and majoring in Accounting. I wanted this position because it gives me the chance to help other students in the chapter grow professionally and make the most of the opportunities available to them. After completing my undergraduate degree, I plan to get my CPA license and begin my career at a large accounting firm. One piece of advice I have for current students is to take advantage of networking opportunities and get involved in clubs and organizations on campus.',
-    photo: '/assets/images/placeholder-headshot.svg',
+    photo: '/assets/images/leadership/abby-azzarone.png',
   },
   {
     name: 'Angie Tso',
@@ -131,7 +143,7 @@ export const board = [
     term: 'Fall 2026 – Present',
     email: 'angie.tso@stonybrook.edu',
     bio: 'Hello, my name is Angie Tso, and I am the Chief Financial Officer and Director of Professional Outreach for Beta Alpha Psi. I am currently a junior at Stony Brook University pursuing a Business Management major with a minor in Accounting. I wanted this position because I am passionate about community involvement and aiding students in their professional development and career aspirations. As a resource for our members, my goal during my time at Beta Alpha Psi is to facilitate strong connections between our members and industry professionals. I aspire to become a CPA and forensic accountant in NYC, using analytical problem solving to protect financial integrity. My advice to current students is to never stop being curious and to absorb everything around you by embracing every opportunity.',
-    photo: '/assets/images/placeholder-headshot.svg',
+    photo: '/assets/images/leadership/angie-tso.png',
   },
   {
     name: 'Hailey Chin',
@@ -139,7 +151,7 @@ export const board = [
     term: 'Fall 2026 – Present',
     email: 'hailey.chin@stonybrook.edu',
     bio: 'Hello, my name is Hailey Chin and I am the Director of Reporting. I am in my third year pursuing an Accounting Major. I pursued this position because I wanted to get more involved with Beta Alpha Psi and help the organization grow. Beta Alpha Psi has helped me connect with so many wonderful people and created great experiences that I want to share with others. I aspire to become a successful CPA and work with others who have the same interest. One piece of advice I would offer to students is that if you set your mind to something, you can be anything you want to be. Nothing is impossible!',
-    photo: '/assets/images/placeholder-headshot.svg',
+    photo: '/assets/images/leadership/hailey-chin.png',
   },
   {
     name: 'Joseph Vento',
@@ -147,7 +159,7 @@ export const board = [
     term: 'Fall 2026 – Present',
     email: 'joseph.vento@stonybrook.edu',
     bio: 'Hello! My name is Joseph Vento and I am the Director of Communications and Information Systems. I am a junior at Stony Brook University majoring in Accounting. The reason I was interested in this position is because it combines two very important skills needed in the business industry today: knowing how to communicate effectively with others and proficiency in using technology. In the future, I plan on gaining my CPA license and pursue a career specifically in tax. My piece of advice to offer would be to always find ways to meet new people and network with those around you. These meaningful connections can lead to new friendships and may even open the door to your first full-time career.',
-    photo: '/assets/images/placeholder-headshot.svg',
+    photo: '/assets/images/leadership/joseph-vento.png',
   },
   {
     name: 'Noa Lim',
@@ -155,7 +167,7 @@ export const board = [
     term: 'Fall 2026 – Present',
     email: 'seowon.lim@stonybrook.edu',
     bio: 'Hi everyone! My name is Noa Lim, and I\'m the BAP Influencer. I am currently a senior at Stony Brook University majoring in Business Management with a concentration in Accounting. I\'m also doing my own quantitative finance research under a lab affiliated to the College of Business. I\'m excited to take on this position because growing the social presence of Beta Alpha Psi can definitely bring our members even more opportunities to reach amazing people. My goal is to support our members to gain the best and most chances to expand their potential in our community via actively connecting with diverse people and communities. I aspire to work in the financial industry with my quantitative skills, especially with investment and risk management. Currently preparing for a direct PhD track in quantitative finance to deepen my expertise in the field. My one piece of advice would be to throw yourself into the unknown. There\'s never a thing \'failure\' but \'process\'. Don\'t limit yourself!',
-    photo: '/assets/images/placeholder-headshot.svg',
+    photo: '/assets/images/leadership/noa-lim.png',
   },
 ];
 
@@ -174,4 +186,16 @@ export const advisors = [
     bio: 'Patrick E. O\'Brien, Ph.D., CPA, CFE is an Assistant Professor of Practice of Accounting in the College of Business at Stony Brook University. Prior to joining Stony Brook University, Dr. O\'Brien served as an Assistant Professor of Accounting at SUNY Old Westbury and previously held faculty and administrative positions at Hofstra University. He began his career in public accounting with Deloitte and continues to practice as a Managing Director of Forensics, Accounting & Advisory Group, Inc., where he specializes in forensic accounting and litigation support. Dr. O\'Brien earned his Ph.D. in Accounting from the University of Scranton, as well as his M.S. in Accounting and B.B.A. in Accounting from Hofstra University and is both a licensed CPA in New York State and a Certified Fraud Examiner (CFE).\n\nDr. O\'Brien\'s research focuses on emerging issues in the accounting profession, including environmental, social, and governance (ESG) reporting, artificial intelligence and technology, forensic accounting, accounting education, and the accounting profession. His work has been presented at national conferences of the American Accounting Association (AAA) and published in numerous peer-reviewed academic and professional journals.\n\nDr. O\'Brien teaches both undergraduate and graduate accounting courses in financial accounting, managerial accounting, forensic accounting, governmental and not-for-profit accounting, and financial accounting research. He has developed courses in forensic accounting and has been actively involved in curriculum innovation, student mentoring, and professional development initiatives throughout his academic career.\n\nDr. O\'Brien is committed to preparing students for successful careers in the accounting profession through mentorship, experiential learning, and engagement with the profession. He previously served as faculty advisor to the Delta Pi Chapter of Beta Alpha Psi at Hofstra University and is excited to serve as co-faculty advisor to the Delta Omicron Chapter of Beta Alpha Psi at Stony Brook University.',
     photo: '/assets/images/placeholder-headshot.svg',
   },
+];
+
+export const advisoryBoard = [
+  { name: 'BDO', url: 'https://www.bdo.com/', logo: '/assets/images/sponsors/bdo.png' },
+  { name: 'Cerini & Associates', url: 'https://ceriniandassociates.com/', logo: '/assets/images/sponsors/cerini.jpg' },
+  { name: 'CohnReznick', url: 'https://www.cohnreznick.com/', logo: '/assets/images/sponsors/cohnreznick.jpg' },
+  { name: 'KPMG', url: 'https://home.kpmg/us/en/home.html', logo: '/assets/images/sponsors/kpmg.png' },
+  { name: 'PwC', url: 'https://www.pwc.com/', logo: '/assets/images/sponsors/pwc.png' },
+];
+
+export const sponsors = [
+  { name: 'Institute of Management Accountants', url: 'https://www.imanet.org/students?ssopc=1', logo: '/assets/images/sponsors/ima.png' },
 ];

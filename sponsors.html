@@ -10,32 +10,37 @@
 <body>
   <div id="site-header"></div>
   <main>
-    <section class="page-hero">
-      <div class="container">
-        <h1>Accounting Advisory Board &amp; Sponsors</h1>
-        <p>Our partners in professional development.</p>
-      </div>
-    </section>
     <section class="page-content">
       <div class="container">
         <div class="section-header reveal">
           <h2>Accounting Advisory Board</h2>
           <hr class="divider">
         </div>
-        <div class="card-grid reveal">
-          <article class="pillar-card" style="text-align:center;"><h3>BDO</h3><p style="color:var(--text-muted);font-size:0.9rem;">Logo coming soon</p></article>
-          <article class="pillar-card" style="text-align:center;"><h3>Cerini &amp; Associates</h3><p style="color:var(--text-muted);font-size:0.9rem;">Logo coming soon</p></article>
-          <article class="pillar-card" style="text-align:center;"><h3>CohnReznick</h3><p style="color:var(--text-muted);font-size:0.9rem;">Logo coming soon</p></article>
-          <article class="pillar-card" style="text-align:center;"><h3>KPMG</h3><p style="color:var(--text-muted);font-size:0.9rem;">Logo coming soon</p></article>
-          <article class="pillar-card" style="text-align:center;"><h3>PwC</h3><p style="color:var(--text-muted);font-size:0.9rem;">Logo coming soon</p></article>
+        <div class="sponsor-grid reveal" id="aab-grid"></div>
+
+        <div class="section-header reveal" style="margin-top: 3rem;">
+          <h2>Sponsors</h2>
+          <hr class="divider">
         </div>
-        <p style="text-align:center; margin-top:2rem; color: var(--text-muted);">
-          Add sponsor logos to <code>assets/images/sponsors/</code> when ready.
-        </p>
+        <div class="sponsor-grid sponsor-grid-single reveal" id="sponsor-grid"></div>
       </div>
     </section>
   </main>
   <div id="site-footer"></div>
+  <script type="module">
+    import { advisoryBoard, sponsors } from '/js/site-config.js';
+
+    function renderSponsor(sponsor) {
+      return `
+        <a href="${sponsor.url}" class="sponsor-card" target="_blank" rel="noopener noreferrer">
+          <img src="${sponsor.logo}" alt="${sponsor.name} logo" class="sponsor-logo" loading="lazy">
+        </a>
+      `;
+    }
+
+    document.getElementById('aab-grid').innerHTML = advisoryBoard.map(renderSponsor).join('');
+    document.getElementById('sponsor-grid').innerHTML = sponsors.map(renderSponsor).join('');
+  </script>
   <script type="module" src="/js/main.js"></script>
 </body>
 </html>
