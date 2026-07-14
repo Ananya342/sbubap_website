@@ -9,6 +9,8 @@ export const site = {
   tagline: 'Preparing accounting and finance students for bright futures.',
   email: 'Sbubap@stonybrook.edu',
   logo: '/assets/images/bap-logo.png',
+  universityLogo: '/assets/images/sbu-logo-white.png',
+  universityLogoColor: '/assets/images/sbu-logo.png',
 
   // Social — replace # with real URLs when ready
   social: {
@@ -25,6 +27,38 @@ export const site = {
     attendanceTracker: '#',
     contactForm: '#',
   },
+
+  /**
+   * Upcoming events — used by Home “Next Up” countdown.
+   * Update dates/titles as the semester schedule solidifies.
+   * Optional: calendarUrl, flyerUrl, groupmeUrl (falls back to site.social.groupme).
+   */
+  upcomingEvents: [
+    {
+      title: 'Welcome Back Mixer',
+      date: '2026-09-08',
+      time: '6:00 PM',
+      location: 'College of Business',
+      type: 'social',
+      flyerUrl: '#',
+    },
+    {
+      title: 'Resume Workshop',
+      date: '2026-09-15',
+      time: '5:30 PM',
+      location: 'Harriman Hall',
+      type: 'professional',
+      flyerUrl: '#',
+    },
+    {
+      title: 'Community Service Drive',
+      date: '2026-09-22',
+      time: '4:00 PM',
+      location: 'Campus Center',
+      type: 'service',
+      flyerUrl: '#',
+    },
+  ],
 
   contact: {
     intro: 'Interested in joining? Send us a message so we can add you to our mailing list!',

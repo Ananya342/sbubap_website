@@ -21,11 +21,18 @@
           </div>
           <h1>Beta Alpha Psi</h1>
           <p class="hero-chapter">Omicron Alpha Chapter</p>
-          <p class="hero-university">Stony Brook University</p>
+          <div class="hero-university">
+            <img
+              src="/assets/images/sbu-logo-white.png"
+              alt="Stony Brook University"
+              class="hero-university-logo"
+              width="360"
+              height="61"
+            >
+          </div>
           <p class="hero-desc">The premier honors organization for accounting, finance, and business analytics students. We build ethical leaders through professional development, firm partnerships, and community service.</p>
           <div class="hero-cta">
-            <a href="/apply.html" class="btn btn-primary">Become a Member</a>
-            <a href="/about.html" class="btn btn-outline">About Our Chapter</a>
+            <a href="/apply.html" class="btn btn-primary hero-cta-primary">Become a Member</a>
           </div>
         </div>
       </div>
@@ -53,50 +60,79 @@
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section section-alt why-join">
       <div class="container">
         <div class="section-header reveal">
           <h2>Why Join?</h2>
           <hr class="divider">
           <p>Professional development, community service, and connections that last beyond graduation.</p>
         </div>
-        <div class="card-grid">
-          <article class="pillar-card reveal">
-            <div class="pillar-icon" aria-hidden="true">01</div>
-            <h3>Professional Development</h3>
-            <ul>
-              <li>Workshops and firm presentations</li>
-              <li>Resume review and interview practice</li>
-              <li>Career panels with industry leaders</li>
-            </ul>
+
+        <div class="values-grid reveal">
+          <article class="value-card">
+            <div class="value-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6">
+                <rect x="10" y="12" width="28" height="24" rx="2" />
+                <path d="M16 20h16M16 26h12M16 32h8" />
+              </svg>
+            </div>
+            <h3>We grow through <strong>Professional Development.</strong></h3>
+            <p>Workshops and firm presentations, resume review and interview practice, plus career panels with industry leaders.</p>
           </article>
-          <article class="pillar-card reveal">
-            <div class="pillar-icon" aria-hidden="true">02</div>
-            <h3>Networking With Firms</h3>
-            <ul>
-              <li>Accounting Advisory Board partners</li>
-              <li>BDO, KPMG, PwC, CohnReznick & more</li>
-              <li>Direct recruiter access</li>
-            </ul>
+          <article class="value-card">
+            <div class="value-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6">
+                <circle cx="16" cy="18" r="5" />
+                <circle cx="32" cy="18" r="5" />
+                <path d="M8 34c1.5-5 5-8 8-8s6.5 3 8 8" />
+                <path d="M24 34c1.5-5 5-8 8-8s6.5 3 8 8" />
+              </svg>
+            </div>
+            <h3>We connect with <strong>Firms.</strong></h3>
+            <p>Accounting Advisory Board partners including BDO, KPMG, PwC, CohnReznick, and more — with direct recruiter access.</p>
           </article>
-          <article class="pillar-card reveal">
-            <div class="pillar-icon" aria-hidden="true">03</div>
-            <h3>Community Service</h3>
-            <ul>
-              <li>Food and clothing drives</li>
-              <li>Island Harvest, Toys for Tots</li>
-              <li>Book Fairies and local outreach</li>
-            </ul>
+          <article class="value-card">
+            <div class="value-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M14 22c0-4.4 3.6-8 8-8s8 3.6 8 8c0 7-8 14-8 14s-8-7-8-14z" />
+              </svg>
+            </div>
+            <h3>We give back through <strong>Community Service.</strong></h3>
+            <p>Food and clothing drives, Island Harvest, Toys for Tots, Book Fairies, and local outreach across the semester.</p>
           </article>
-          <article class="pillar-card reveal">
-            <div class="pillar-icon" aria-hidden="true">04</div>
-            <h3>Social Events</h3>
-            <ul>
-              <li>Chapter gatherings and inductions</li>
-              <li>Build your professional network</li>
-              <li>Find friends across the College of Business</li>
-            </ul>
+          <article class="value-card">
+            <div class="value-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M10 34 L24 8 L38 34 Z" />
+                <path d="M18 28 H30" />
+              </svg>
+            </div>
+            <h3>We build bonds at <strong>Social Events.</strong></h3>
+            <p>Chapter gatherings and inductions help you grow your professional network and find friends across the College of Business.</p>
           </article>
+        </div>
+
+        <div class="points-glance reveal" id="points-glance">
+          <div class="points-glance-copy">
+            <h3>Points at a glance</h3>
+            <p>See what you need this semester. Toggle status and program — we’ll show your target.</p>
+          </div>
+          <div class="points-glance-controls" role="group" aria-label="Point requirements">
+            <div class="points-toggle" data-points-group="status">
+              <button type="button" class="points-chip is-active" data-status="pledge" aria-pressed="true">Pledge</button>
+              <button type="button" class="points-chip" data-status="member" aria-pressed="false">Member</button>
+            </div>
+            <div class="points-toggle" data-points-group="level">
+              <button type="button" class="points-chip is-active" data-level="undergrad" aria-pressed="true">Undergraduate</button>
+              <button type="button" class="points-chip" data-level="grad" aria-pressed="false">Graduate</button>
+            </div>
+          </div>
+          <div class="points-glance-result">
+            <span class="points-result-value" id="points-result-value">8</span>
+            <span class="points-result-label" id="points-result-label">points per semester for undergraduate pledges</span>
+            <p class="points-result-note">Most events = 1 point · High school visits = 2 points</p>
+            <a href="/membership.html" class="points-result-link">Full requirements →</a>
+          </div>
         </div>
       </div>
     </section>
@@ -106,13 +142,26 @@
         <div class="section-header reveal">
           <h2>Upcoming Events</h2>
           <hr class="divider">
-          <p>Spring 2026 schedule is being finalized. Check back soon!</p>
+          <p>See what’s next — add it to your calendar or get the flyer in one tap.</p>
         </div>
         <div class="events-follow-grid reveal">
-          <div class="events-calendar-panel placeholder-panel">
-            <strong>Events calendar coming soon</strong>
-            <p>Add your Google Calendar link in <code>js/site-config.js</code> → <code>links.googleCalendar</code></p>
-            <a href="/events.html" class="btn btn-secondary" style="margin-top: 1rem;">View Events Page</a>
+          <div class="next-event" id="next-event">
+            <div class="next-event-countdown">
+              <p class="next-event-eyebrow" id="next-event-eyebrow">Next event in</p>
+              <p class="next-event-days" id="next-event-days">—</p>
+              <p class="next-event-days-label" id="next-event-days-label">days</p>
+            </div>
+            <div class="next-event-body">
+              <p class="next-event-when" id="next-event-when"></p>
+              <h3 class="next-event-title" id="next-event-title">Loading…</h3>
+              <p class="next-event-meta" id="next-event-meta"></p>
+              <div class="next-event-actions" id="next-event-actions">
+                <a class="next-event-chip" id="next-event-calendar" href="#" target="_blank" rel="noopener noreferrer">Calendar</a>
+                <a class="next-event-chip" id="next-event-groupme" href="#" target="_blank" rel="noopener noreferrer">GroupMe</a>
+                <a class="next-event-chip" id="next-event-flyer" href="#" target="_blank" rel="noopener noreferrer">Flyer</a>
+              </div>
+              <a href="/events.html" class="next-event-all">View all events →</a>
+            </div>
           </div>
           <aside class="follow-us-panel">
             <h3>Follow Us</h3>
